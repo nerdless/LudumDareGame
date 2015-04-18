@@ -7,16 +7,20 @@ public class DestroyByBoundary : MonoBehaviour {
 	public Vector2 horizontalBounds;
 	public Vector2 verticalBounds;
 
-	void Start ()
-	{
-		horizontalBounds = new Vector2 (Player.GetComponent<Done_PlayerController> ().boundary.xMin,
-		                              Player.GetComponent<Done_PlayerController> ().boundary.xMax);
-
-		verticalBounds = new Vector2 (Player.GetComponent<Done_PlayerController> ().boundary.zMin,
-		                               Player.GetComponent<Done_PlayerController> ().boundary.zMax);
-	}
 
 	void Update () {
+
+		if (GetComponent<Rigidbody2D> ().position.x > horizontalBounds.y ||
+			GetComponent<Rigidbody2D> ().position.x < horizontalBounds.x ||
+		    GetComponent<Rigidbody2D> ().position.y > verticalBounds.y ||
+			GetComponent<Rigidbody2D> ().position.y < verticalBounds.x)
+		{
+			Debug.Log("estaba en: "+GetComponent<Rigidbody2D> ().position);
+			Destroy (gameObject);
+
+		}
+
+
 	
 	}
 }

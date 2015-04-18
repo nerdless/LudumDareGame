@@ -17,8 +17,15 @@ public class Done_PlayerController : MonoBehaviour
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
-	 
 	private float nextFire;
+
+	private Vector3 upperCorner;
+
+	void Start ()
+	{
+		upperCorner = new Vector3 (Screen.width, Screen.height, 0.0f);
+		Debug.Log ("upper corner: " + upperCorner);
+	}
 	
 	void Update ()
 	{
