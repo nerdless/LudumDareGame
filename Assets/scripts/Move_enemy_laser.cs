@@ -24,11 +24,18 @@ public class Move_enemy_laser : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerBullet") 
+		if (other.gameObject.tag == "PlayerBullet") 
 		{
-			Destroy (other.gameObject);
+			Destroy(other.gameObject);
+			Destroy (gameObject);
+		}
+		if (other.gameObject.tag == "Player") 
+		{
+			//Debug.Log ("hit user");
+			User.SendMessage("ApplyDamage");
 			Destroy (gameObject);
 		}
 	}
+
 
 }

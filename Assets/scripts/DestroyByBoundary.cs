@@ -5,7 +5,7 @@ public class DestroyByBoundary : MonoBehaviour {
 
 	public Vector2 horizontalBounds;
 	public Camera mainCamera;	
-	public Vector3 upperCorner;
+	private Vector3 upperCorner;
 
 	void Start ()
 	{
