@@ -8,8 +8,13 @@ public class EnemyCollision : MonoBehaviour {
 		if (collider.gameObject.tag == "Player") 
 		{
 			collider.gameObject.SendMessage("ApplyDamage");
-			gameObject.SendMessage("ApplyDamage");
+			DestroyByCollision();
 		}
 	}
+
+	void DestroyByCollision(){
+		Destroy (gameObject);
+	}
+
 
 }

@@ -11,7 +11,7 @@ public class PlayerLifes : MonoBehaviour {
 	}
 
 	void Die(){
-		Debug.Log ("You are so fuking dead");
+		Debug.Log ("You are so fucking dead");
 		//Explote();
 	}
 
