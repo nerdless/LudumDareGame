@@ -14,10 +14,28 @@ public class Done_PlayerController : MonoBehaviour
 	//public float tilt;
 	public Done_Boundary boundary;
 
-	public GameObject shot;
-	public Transform shotSpawn;
-	public float fireRate;
-	private float nextFire;
+	public GameObject shotQ;
+	public Transform shotQSpawn;
+	public float fireRateQ;
+	private float nextFireQ;
+
+	public GameObject shotW;
+	public Transform shotWSpawn;
+	public float fireRateW;
+	private float nextFireW;
+
+	public GameObject shotE;
+	public Transform shotESpawn;
+	public float fireRateE;
+	private float nextFireE;
+
+	public GameObject shotR;
+	public Transform shotRSpawn;
+	public float fireRateR;
+	private float nextFireR;
+
+
+
 	public Camera mainCamera;
 	private Vector3 upperCorner;
 	public float horizontalPosition;
@@ -27,15 +45,36 @@ public class Done_PlayerController : MonoBehaviour
 		upperCorner = new Vector3 (Screen.width, Screen.height, 0.0f);
 		upperCorner = mainCamera.ScreenToWorldPoint(upperCorner);
 		//Debug.Log ("upper corner: " + upperCorner);
-		nextFire = 0; //cause Zhou ask for it
+		nextFireQ = 0; //cause Zhou ask for it
+		nextFireW = 0;
+		nextFireE = 0;
+		nextFireR = 0;
 	}
 	
 	void Update ()
 	{
-		if (Input.GetKey(KeyCode.Space) && Time.time > nextFire) 
+		if (Input.GetKey(KeyCode.Q) && Time.time > nextFireQ) 
 		{
-			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			nextFireQ = Time.time + fireRateQ;
+			Instantiate(shotQ, shotQSpawn.position, shotQSpawn.rotation);
+			GetComponent<AudioSource>().Play ();
+		}
+		if (Input.GetKey(KeyCode.W) && Time.time > nextFireW) 
+		{
+			nextFireW = Time.time + fireRateW;
+			Instantiate(shotW, shotWSpawn.position, shotWSpawn.rotation);
+			GetComponent<AudioSource>().Play ();
+		}
+		if (Input.GetKey(KeyCode.E) && Time.time > nextFireE) 
+		{
+			nextFireE = Time.time + fireRateE;
+			Instantiate(shotE, shotESpawn.position, shotESpawn.rotation);
+			GetComponent<AudioSource>().Play ();
+		}
+		if (Input.GetKey(KeyCode.R) && Time.time > nextFireR) 
+		{
+			nextFireR = Time.time + fireRateR;
+			Instantiate(shotR, shotRSpawn.position, shotRSpawn.rotation);
 			GetComponent<AudioSource>().Play ();
 		}
 	}
