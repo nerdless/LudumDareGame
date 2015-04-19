@@ -5,14 +5,15 @@ public class enemy_movement : MonoBehaviour {
 	public GameObject User;
 
 	private Vector3 initialPosition;
-	public float verticalSpeed, horizontalSpeed;
+	public float verticalSpeedControl, horizontalSpeed;
+	private float verticalSpeed;
 
 	// Use this for initialization
 	void Start () 
 	{
 		User = GameObject.FindGameObjectWithTag("Player");
 		initialPosition = transform.position;
-		horizontalSpeed = -0.01f;
+		//horizontalSpeed = -0.01f;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +21,7 @@ public class enemy_movement : MonoBehaviour {
 	{
 		float userY = User.transform.position.y;
 		float shipY = transform.position.y;
-		verticalSpeed = (userY - shipY) / 100;
+		verticalSpeed = (userY - shipY) * verticalSpeedControl/ 100;
 		Accelerate ();
 		MoveShip ();
 	}
