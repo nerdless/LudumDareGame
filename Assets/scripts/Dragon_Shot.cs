@@ -41,12 +41,9 @@ public class Dragon_Shot : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void Slow()
 	{
-		if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerBullet") 
-		{
-			Destroy (other.gameObject);
-			Destroy (gameObject);
-		}
+		this.horizontalSpeed /= 2;
 	}
+
 }

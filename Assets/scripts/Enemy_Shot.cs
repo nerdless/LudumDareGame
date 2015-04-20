@@ -40,13 +40,10 @@ public class Enemy_Shot : MonoBehaviour {
 			Instantiate(shot, shotSpawn.position, shot.transform.rotation);
 		}
 	}
+	
 
-	void OnTriggerEnter2D(Collider2D other)
+	void Slow()
 	{
-		if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerDamagingBullet") 
-		{
-			Destroy (other.gameObject);
-			Destroy (gameObject);
-		}
+		this.horizontalSpeed /= 2;
 	}
 }

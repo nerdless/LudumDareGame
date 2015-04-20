@@ -42,18 +42,7 @@ public class enemy_movement : MonoBehaviour {
 		initialPosition = transform.position;
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerDamagingBullet") {
-			Destroy (other.gameObject);
-			Destroy (gameObject);
-		} 
-		else if(other.gameObject.tag == "PlayerSlowingBullet")
-		{
-			Slow ();
-			Destroy(other.gameObject);
-		}
-	}
+
 
 	void Slow()
 	{

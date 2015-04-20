@@ -33,9 +33,9 @@ public class EnemyLifes : MonoBehaviour {
 
 	}
 	
-	void ApplyDamage()
+	void ApplyDamage(int damage)
 	{
-		lifes -= 1;
+		lifes -= damage;
 		//Debug.Log ("you have been damaged");
 	}
 
