@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class enemy_movement : MonoBehaviour {
-	public GameObject User;
+	private GameObject User;
 
 	private Vector3 initialPosition;
 	public float verticalSpeedControl, horizontalSpeed;
@@ -42,10 +42,38 @@ public class enemy_movement : MonoBehaviour {
 		initialPosition = transform.position;
 	}
 
-
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		switch(other.gameObject.tag)
+		{
+		default:
+			break;
+		case "BulletQ":
+			Destroy (other.gameObject);
+			gameObject.SendMessage("ApplyDamage",1);
+			break;
+			
+		case "BulletW":
+			Destroy(other.gameObject);
+			Slow ();
+			break;
+			
+		case "BulletE":
+			Destroy (other.gameObject);
+			gameObject.SendMessage("ApplyDamage",2);
+			break;
+			
+		case "Player":
+			other.SendMessage("ApplyDamage");
+			Destroy(gameObject);
+			break;
+			
+		}
+		
+	}
 
 	void Slow()
 	{
-		this.horizontalSpeed /= 2;
+		this.horizontalSpeed /= 2.0f;
 	}
 }

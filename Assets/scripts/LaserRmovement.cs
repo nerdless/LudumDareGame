@@ -22,7 +22,7 @@ public class LaserRmovement : MonoBehaviour {
 		{
 			if(hitColliders[i].gameObject.tag == "Crane" || hitColliders[i].gameObject.tag == "Pegasus" || hitColliders[i].gameObject.tag == "Dragon")
 			{
-				hitColliders[i].gameObject.SendMessage("ApplyDamage");
+				hitColliders[i].gameObject.SendMessage("ApplyDamage", 4);
 			//Destroy (hitColliders[i].gameObject);
 			}
 		}

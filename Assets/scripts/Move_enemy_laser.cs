@@ -24,7 +24,7 @@ public class Move_enemy_laser : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "PlayerDamagingBullet") 
+		if (other.gameObject.tag == "BulletQ" || other.gameObject.tag == "BulletW" || other.gameObject.tag == "BulletE" || other.gameObject.tag == "BulletR") 
 		{
 			Destroy(other.gameObject);
 			Destroy (gameObject);

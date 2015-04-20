@@ -15,7 +15,7 @@ public class EnemyCollider : MonoBehaviour {
 				break;
 				
 			case "BulletW":
-				gameObject.SendMessage("Slow");
+				this.gameObject.SendMessage("Slow");
 				Destroy(other.gameObject);
 				break;
 				
