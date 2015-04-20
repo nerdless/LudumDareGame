@@ -13,6 +13,8 @@ public class Done_PlayerController : MonoBehaviour
 	public float speed;
 	//public float tilt;
 	public Done_Boundary boundary;
+	public GameObject BiggestElementBelow;
+	public float lowPadding;
 
 	public GameObject shotQ;
 	public Transform shotQSpawn;
@@ -52,6 +54,8 @@ public class Done_PlayerController : MonoBehaviour
 		nextFireE = 0;
 		nextFireR = 0;
 		dispersionAngle = dispersionAngle / 8;
+		lowPadding = 2*BiggestElementBelow.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*BiggestElementBelow.transform.localScale.x;
+		lowPadding += gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*gameObject.transform.localScale.x;
 	}
 	
 	void Update ()
@@ -105,7 +109,7 @@ public class Done_PlayerController : MonoBehaviour
 		(
 				//horizontalPosition, //for constraits in horizontal position
 				Mathf.Clamp (GetComponent<Rigidbody2D>().position.x, -upperCorner.x, upperCorner.x),
-				Mathf.Clamp (GetComponent<Rigidbody2D>().position.y, -upperCorner.y, upperCorner.y),
+				Mathf.Clamp (GetComponent<Rigidbody2D>().position.y, -upperCorner.y+lowPadding, upperCorner.y),
 				0.0f
 			
 		);
