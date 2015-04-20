@@ -14,8 +14,6 @@ public class EnemyLifes : MonoBehaviour {
 	void FixedUpdate () {
 		if (lifes < 1)
 			Die ();
-		
-		
 	}
 	
 	void Die(){
@@ -39,5 +37,10 @@ public class EnemyLifes : MonoBehaviour {
 	{
 		lifes -= 1;
 		//Debug.Log ("you have been damaged");
+	}
+
+	void Slow()
+	{
+		this.gameObject.SendMessage ("Slow");
 	}
 }
