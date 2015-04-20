@@ -43,7 +43,7 @@ public class Enemy_Shot : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerBullet") 
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerDamagingBullet") 
 		{
 			Destroy (other.gameObject);
 			Destroy (gameObject);
