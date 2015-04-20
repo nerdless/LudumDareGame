@@ -34,3 +34,5 @@ obj/
 Icon?
 ehthumbs.db
 Thumbs.db
+
+*.app
