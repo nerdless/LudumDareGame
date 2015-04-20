@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4b19a628d87c543079e9ba07cf26fc74
-timeCreated: 1429493249
+timeCreated: 1429497217
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,7 +61,7 @@ TextureImporter:
         width: 612
         height: 136
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: central-hud_1
       rect:
@@ -71,7 +71,7 @@ TextureImporter:
         width: 612
         height: 136
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: central-hud_2
       rect:
@@ -81,17 +81,17 @@ TextureImporter:
         width: 612
         height: 136
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: central-hud_3
       rect:
         serializedVersion: 2
-        x: 1837
+        x: 1836
         y: 0
-        width: 611
+        width: 612
         height: 136
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
