@@ -81,13 +81,29 @@ public class Done_PlayerController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		float moveVertical = Input.GetAxis ("Vertical");
+		//float moveVertical = Input.GetAxis ("Vertical");
+		bool pressup =Input.GetKey (KeyCode.UpArrow);
+		bool pressdown = Input.GetKey (KeyCode.DownArrow);
+		bool pressrigth = Input.GetKey (KeyCode.RightArrow);
+		bool pressleft = Input.GetKey (KeyCode.LeftArrow);
 
-		Vector3 movement = new Vector3 (0.0f, moveVertical, 0.0f);
+		float moveVertical = 0;
+		float moveHorizontal = 0;
+		if (pressup)
+			moveVertical += 1;
+		if (pressdown)
+			moveVertical -= 1;
+		if (pressrigth)
+			moveHorizontal += 1;
+		if (pressleft)
+			moveHorizontal -= 1;
+
+		Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
 		GetComponent<Rigidbody2D>().velocity = movement * speed;
 		GetComponent<Rigidbody2D>().position = new Vector3
 		(
-				horizontalPosition, 
+				//horizontalPosition, //for constraits in horizontal position
+				Mathf.Clamp (GetComponent<Rigidbody2D>().position.x, -upperCorner.x, upperCorner.x),
 				Mathf.Clamp (GetComponent<Rigidbody2D>().position.y, -upperCorner.y, upperCorner.y),
 				0.0f
 			
