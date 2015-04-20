@@ -56,25 +56,25 @@ public class Done_PlayerController : MonoBehaviour
 		if (Input.GetKey(KeyCode.Q) && Time.time > nextFireQ) 
 		{
 			nextFireQ = Time.time + fireRateQ;
-			Instantiate(shotQ, shotQSpawn.position, shotQSpawn.rotation);
+			Instantiate(shotQ, shotQSpawn.position, shotQ.transform.rotation);
 			GetComponent<AudioSource>().Play ();
 		}
 		if (Input.GetKey(KeyCode.W) && Time.time > nextFireW) 
 		{
 			nextFireW = Time.time + fireRateW;
-			Instantiate(shotW, shotWSpawn.position, shotWSpawn.rotation);
+			Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation);
 			GetComponent<AudioSource>().Play ();
 		}
 		if (Input.GetKey(KeyCode.E) && Time.time > nextFireE) 
 		{
 			nextFireE = Time.time + fireRateE;
-			Instantiate(shotE, shotESpawn.position, shotESpawn.rotation);
+			Instantiate(shotE, shotESpawn.position, shotE.transform.rotation);
 			GetComponent<AudioSource>().Play ();
 		}
 		if (Input.GetKey(KeyCode.R) && Time.time > nextFireR) 
 		{
 			nextFireR = Time.time + fireRateR;
-			Instantiate(shotR, shotRSpawn.position, shotRSpawn.rotation);
+			Instantiate(shotR, shotRSpawn.position, shotR.transform.rotation);
 			GetComponent<AudioSource>().Play ();
 		}
 	}
