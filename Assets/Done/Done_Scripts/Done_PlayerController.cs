@@ -40,6 +40,8 @@ public class Done_PlayerController : MonoBehaviour
 	private Vector3 upperCorner;
 	public float horizontalPosition;
 
+	public float dispersionAngle;
+
 	void Start ()
 	{
 		upperCorner = new Vector3 (Screen.width, Screen.height, 0.0f);
@@ -49,33 +51,32 @@ public class Done_PlayerController : MonoBehaviour
 		nextFireW = 0;
 		nextFireE = 0;
 		nextFireR = 0;
+		dispersionAngle = dispersionAngle / 8;
 	}
 	
 	void Update ()
 	{
-		if (Input.GetKey(KeyCode.Q) && Time.time > nextFireQ) 
-		{
+		if (Input.GetKey (KeyCode.Q) && Time.time > nextFireQ) {
 			nextFireQ = Time.time + fireRateQ;
-			Instantiate(shotQ, shotQSpawn.position, shotQ.transform.rotation);
-			GetComponent<AudioSource>().Play ();
+			Instantiate (shotQ, shotQSpawn.position, shotQ.transform.rotation);
 		}
 		if (Input.GetKey(KeyCode.W) && Time.time > nextFireW) 
 		{
 			nextFireW = Time.time + fireRateW;
-			Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation);
-			GetComponent<AudioSource>().Play ();
+			MultiInstatiate();
+			//GetComponent<AudioSource>().Play ();
 		}
 		if (Input.GetKey(KeyCode.E) && Time.time > nextFireE) 
 		{
 			nextFireE = Time.time + fireRateE;
 			Instantiate(shotE, shotESpawn.position, shotE.transform.rotation);
-			GetComponent<AudioSource>().Play ();
+			//GetComponent<AudioSource>().Play ();
 		}
 		if (Input.GetKey(KeyCode.R) && Time.time > nextFireR) 
 		{
 			nextFireR = Time.time + fireRateR;
 			Instantiate(shotR, shotRSpawn.position, shotR.transform.rotation);
-			GetComponent<AudioSource>().Play ();
+			//GetComponent<AudioSource>().Play ();
 		}
 	}
 
@@ -108,8 +109,22 @@ public class Done_PlayerController : MonoBehaviour
 				0.0f
 			
 		);
-		/*
-		GetComponent<Rigidbody>().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
-		*/
+
+
+
+	}
+	void MultiInstatiate()
+	{
+
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation);
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-dispersionAngle));
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-2*dispersionAngle));
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-3*dispersionAngle));
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-4*dispersionAngle));
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-5*dispersionAngle));
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-6*dispersionAngle));
+		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-7*dispersionAngle));
 	}
 }
+
+
