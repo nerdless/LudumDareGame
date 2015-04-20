@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 44150c15b21a3904986efe2ddf9831b6
-timeCreated: 1429552384
+guid: 34ca0c24fdde248748a2b5f1cb39658f
+timeCreated: 1429514754
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: icecreamtruck_0
-    21300002: icecreamtruck_1
-    21300004: icecreamtruck_2
-    21300006: icecreamtruck_3
+    21300000: E_0
+    21300002: E_1
+    21300004: E_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,43 +52,33 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: icecreamtruck_0
+    - name: E_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: icecreamtruck_1
+    - name: E_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 16
         y: 0
-        width: 256
-        height: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: icecreamtruck_2
+    - name: E_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 32
         y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: icecreamtruck_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

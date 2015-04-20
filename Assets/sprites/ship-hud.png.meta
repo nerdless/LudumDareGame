@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 44150c15b21a3904986efe2ddf9831b6
-timeCreated: 1429552384
+guid: 0eee68bb53c4247fe88a6275b1aa3962
+timeCreated: 1429494464
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: icecreamtruck_0
-    21300002: icecreamtruck_1
-    21300004: icecreamtruck_2
-    21300006: icecreamtruck_3
+    21300000: ship-hud_0
+    21300002: ship-hud_1
+    21300004: ship-hud_2
+    21300006: ship-hud_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -53,7 +53,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: icecreamtruck_0
+    - name: ship-hud_0
       rect:
         serializedVersion: 2
         x: 0
@@ -63,7 +63,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: icecreamtruck_1
+    - name: ship-hud_1
       rect:
         serializedVersion: 2
         x: 256
@@ -73,7 +73,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: icecreamtruck_2
+    - name: ship-hud_2
       rect:
         serializedVersion: 2
         x: 512
@@ -83,7 +83,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: icecreamtruck_3
+    - name: ship-hud_3
       rect:
         serializedVersion: 2
         x: 768
