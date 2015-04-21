@@ -16,24 +16,31 @@ public class PlayerLifes : MonoBehaviour {
 
 	public GameObject explotion;
 
+	private float deathTime = -1;
+	private float delay = 0.335f;
+	private bool isDeath = false;
+
 	void FixedUpdate () {
-		if (lifes < 1)
+		if (deathTime != -1) {
+			if(Time.time > deathTime + delay)
+			{
+				Application.LoadLevel (1);
+			}
+		}
+		if (lifes < 1 && !isDeath)
 			Die ();
+
 	}
 
 	void Die(){
 		Debug.Log ("You are so fucking dead");
 		Instantiate (explotion, transform.position, transform.rotation);
 		GetComponent<AudioSource> ().Play ();
-		Wait ();
-		Application.LoadLevel (1);
+		deathTime = Time.time;
+		isDeath = true;
 		//Explote();
 	}
 
-	IEnumerator Wait() 
-	{
-		yield return new WaitForSeconds(5);
-	}
 
 	void ApplyDamage()
 	{
