@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScoreCounter : MonoBehaviour {
 
-	public int score;
+	public static int score;
 	void Start () {
 		score = 0;
 	}
