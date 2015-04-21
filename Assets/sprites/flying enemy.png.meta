@@ -1,0 +1,77 @@
+fileFormatVersion: 2
+guid: d6815cc1e04cf7d4b863a779b035de39
+timeCreated: 1429575408
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: flying enemy_0
+    21300002: flying enemy_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: flying enemy_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 58
+        width: 211
+        height: 147
+      alignment: 9
+      pivot: {x: .39304167, y: .300127357}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flying enemy_1
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 50
+        width: 241
+        height: 164
+      alignment: 9
+      pivot: {x: .424024642, y: .349406779}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: b846c86b97d1de84f94fc89197a16d4f
+timeCreated: 1429576302
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: big skull_0
+    21300002: big skull_1
+    21300004: big skull_2
+    21300006: big skull_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: big skull_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 40
+        width: 120
+        height: 114
+      alignment: 9
+      pivot: {x: .574517608, y: .393546522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: big skull_1
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 24
+        width: 116
+        height: 136
+      alignment: 9
+      pivot: {x: .588099778, y: .490607262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: big skull_2
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 24
+        width: 113
+        height: 135
+      alignment: 9
+      pivot: {x: .588964403, y: .500071347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: big skull_3
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 22
+        width: 116
+        height: 126
+      alignment: 9
+      pivot: {x: .577757716, y: .453544736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
