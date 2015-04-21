@@ -24,7 +24,7 @@ public class PlayerLifes : MonoBehaviour {
 		if (deathTime != -1) {
 			if(Time.time > deathTime + delay)
 			{
-				Application.LoadLevel (1);
+				Application.LoadLevel (2);
 			}
 		}
 		if (lifes < 1 && !isDeath)
