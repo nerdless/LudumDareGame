@@ -12,6 +12,7 @@ public class PlayerLifes : MonoBehaviour {
 	public GameObject ship1;
 	public GameObject ship2;
 	public GameObject ship3;
+	
 	public int lifes;
 
 	public GameObject explotion;
@@ -35,7 +36,9 @@ public class PlayerLifes : MonoBehaviour {
 	void Die(){
 		Debug.Log ("You are so fucking dead");
 		Instantiate (explotion, transform.position, transform.rotation);
-		GetComponent<AudioSource> ().Play ();
+		AudioSource [] audios = GetComponents<AudioSource> ();
+		AudioSource dieSound = audios [0];
+		dieSound.Play ();
 		deathTime = Time.time;
 		isDeath = true;
 		//Explote();
