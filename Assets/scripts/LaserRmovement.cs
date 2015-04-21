@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class LaserRmovement : MonoBehaviour {
-
+	public GameObject explotion;
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.R)) 
@@ -18,14 +18,18 @@ public class LaserRmovement : MonoBehaviour {
 		float radius = 3;
 		Collider2D [] hitColliders = Physics2D.OverlapCircleAll (center, radius);
 
+
 		for (int i = 0; i< hitColliders.Length; i++) 
 		{
 			if(hitColliders[i].gameObject.tag == "Crane" || hitColliders[i].gameObject.tag == "Pegasus" || hitColliders[i].gameObject.tag == "Dragon")
 			{
 				hitColliders[i].gameObject.SendMessage("ApplyDamage", 4);
+
 			//Destroy (hitColliders[i].gameObject);
 			}
 		}
+		Instantiate (explotion, gameObject.transform.position, explotion.gameObject.transform.rotation);
 		Destroy (gameObject);
+
 	}
 }
