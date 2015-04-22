@@ -18,13 +18,15 @@ public class SpawnEnemy : MonoBehaviour {
 		mainCamera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<Camera> ();
 		upperCorner = new Vector3 (Screen.width, Screen.height, 0.0f);
 		upperCorner = mainCamera.ScreenToWorldPoint(upperCorner);
+
 		lowPadding = 2*BiggestElementBelow.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*BiggestElementBelow.transform.localScale.x;
-		lowPadding += gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*gameObject.transform.localScale.x;
+		//lowPadding += gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*gameObject.transform.localScale.x;
+
 	}
 	
 	void Update () 
 	{
-		if(Time.time > nextEnemy)
+		if(Time.timeSinceLevelLoad > nextEnemy)
 		{
 			nextEnemy += SpawnRate;
 			SpawnPosition = new Vector3(upperCorner.x, Random.Range(-upperCorner.y+lowPadding, upperCorner.y),0);

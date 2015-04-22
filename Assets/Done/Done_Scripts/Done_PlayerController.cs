@@ -57,9 +57,10 @@ public class Done_PlayerController : MonoBehaviour
 		lowPadding = 2*BiggestElementBelow.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*BiggestElementBelow.transform.localScale.x;
 		lowPadding += gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.extents.y*gameObject.transform.localScale.x;
 	}
-	
+
 	void Update ()
 	{
+
 		if (Input.GetKey (KeyCode.Q) && Time.time > nextFireQ) {
 			nextFireQ = Time.time + fireRateQ;
 			Instantiate (shotQ, shotQSpawn.position, shotQ.transform.rotation);
@@ -108,18 +109,13 @@ public class Done_PlayerController : MonoBehaviour
 		GetComponent<Rigidbody2D>().position = new Vector3
 		(
 				//horizontalPosition, //for constraits in horizontal position
-				Mathf.Clamp (GetComponent<Rigidbody2D>().position.x, -upperCorner.x, upperCorner.x),
-				Mathf.Clamp (GetComponent<Rigidbody2D>().position.y, -upperCorner.y+lowPadding, upperCorner.y),
-				0.0f
-			
+			Mathf.Clamp (GetComponent<Rigidbody2D>().position.x, -upperCorner.x, upperCorner.x),
+			Mathf.Clamp (GetComponent<Rigidbody2D>().position.y, -upperCorner.y+lowPadding, upperCorner.y),
+			0.0f
 		);
-
-
-
 	}
 	void MultiInstatiate()
 	{
-
 		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation);
 		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-dispersionAngle));
 		Instantiate(shotW, shotWSpawn.position, shotW.transform.rotation*Quaternion.Euler(0,0,-2*dispersionAngle));
