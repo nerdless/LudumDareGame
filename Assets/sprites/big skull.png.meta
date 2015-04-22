@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b846c86b97d1de84f94fc89197a16d4f
-timeCreated: 1429576302
+timeCreated: 1429676750
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,7 +33,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -56,42 +56,42 @@ TextureImporter:
     - name: big skull_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 40
-        width: 120
-        height: 114
-      alignment: 9
-      pivot: {x: .574517608, y: .393546522}
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: big skull_1
       rect:
         serializedVersion: 2
-        x: 235
-        y: 24
-        width: 116
-        height: 136
-      alignment: 9
-      pivot: {x: .588099778, y: .490607262}
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: big skull_2
       rect:
         serializedVersion: 2
-        x: 419
-        y: 24
-        width: 113
-        height: 135
-      alignment: 9
-      pivot: {x: .588964403, y: .500071347}
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: big skull_3
       rect:
         serializedVersion: 2
-        x: 617
-        y: 22
-        width: 116
-        height: 126
-      alignment: 9
-      pivot: {x: .577757716, y: .453544736}
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
